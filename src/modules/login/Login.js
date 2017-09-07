@@ -53,4 +53,4 @@ class Login extends Component {
   }
 }
 
-export default Form.create()(Login);;
+export default Form.create()(Login);
