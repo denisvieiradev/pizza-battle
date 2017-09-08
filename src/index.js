@@ -15,9 +15,4 @@ const render = (Component) => {
 };
 
 render(Application);
-
-
-// ReactDOM.render(<App />, document.getElementById('root'));
-
-
 registerServiceWorker();
