@@ -5,31 +5,13 @@ import {
 } from './LoginTypes'
 
 export const initial = {
-  email: '',
-  error: '',
-  logged: false,
-  loading: false,
-  password: '',
-  token: '',
+  teste: 'LOGIN TESTE REDUX RUN'
 }
 
 export default (state = initial, action) => {
   switch (action.type) {
-    case LOGIN_ERROR:
-      return { ...state, error: action.payload }
-    case LOGIN_INFO:
-      const { email, password, token } = action.payload
-
-      return {
-        ...state,
-        email,
-        password,
-        token,
-        logged: true,
-        error: '',
-      }
-    case LOGIN_LOADING:
-      return { ...state, loading: action.payload }
+    case 'TESTE':
+      return { ...state, teste: action.payload }
     default:
       return state
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button,Row, Card, Col, Checkbox } from 'antd';
+import { connect } from 'react-redux'
 const FormItem = Form.Item;
 
 class Login extends Component {
@@ -43,7 +44,7 @@ class Login extends Component {
                   <Button type="primary" htmlType="submit" className="login-form-button">
                     Log in
                   </Button>
-                  Or <a href="">register now!</a>
+                  Or <a href="">register now! { this.props.teste} </a>
                 </FormItem>
               </Form>
             </Card>
@@ -53,4 +54,10 @@ class Login extends Component {
   }
 }
 
-export default Form.create()(Login);
+const mapStateToProps = (state) => ({
+  teste: state.login.teste,
+})
+
+const LoginForm = Form.create()(Login);
+
+export default connect(mapStateToProps, null)(LoginForm);
