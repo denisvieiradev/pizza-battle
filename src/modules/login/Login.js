@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button,Row, Card, Col, Checkbox } from 'antd';
 import { connect } from 'react-redux'
+import './Login.css';
 const FormItem = Form.Item;
 
 class Login extends Component {
@@ -12,10 +13,11 @@ class Login extends Component {
       }
     });
   }
+
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-        <Row type="flex" justify="center" align="middle">
+        <Row type="flex" justify="center" align="middle" className="login-container">
           <Col span={6}>
             <Card title="PIZZA BATTLE">
               <Form onSubmit={this.handleSubmit} className="login-form">
