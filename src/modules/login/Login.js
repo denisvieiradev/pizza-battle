@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button,Row, Card, Col, Checkbox } from 'antd';
 import { connect } from 'react-redux';
+import './Login.css';
 
 const FormItem = Form.Item;
 
@@ -19,8 +20,13 @@ class Login extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <Row>
-        <Col>
+      <Row className="login-wrapper">
+        <Col className="form-holder">
+
+          <div className="logo">
+            <span className="logo -pizza"></span>
+          </div>
+
           <Card title="PIZZA BATTLE">
 
             <Form onSubmit={this.handleSubmit}>
@@ -53,14 +59,11 @@ class Login extends Component {
                     initialValue: true,
                   })(<Checkbox>Remember me</Checkbox>)
                 }
+              </FormItem>
 
-                <a href="">Forgot password</a>
-
-                <Button type="primary" htmlType="submit">
-                  Log in
-                </Button>
-
-                Or <a href="">register now! { this.props.teste }</a>
+              <FormItem>
+                <Button type="primary" htmlType="submit">Log in</Button>
+                &nbsp;Or <a href="">register now!</a>
               </FormItem>
             </Form>
           </Card>
