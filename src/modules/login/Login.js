@@ -23,11 +23,11 @@ class Login extends Component {
       <Row className="login-wrapper">
         <Col className="form-holder">
 
-          <div className="logo">
+          <div className="logo-holder">
             <span className="logo -pizza"></span>
           </div>
 
-          <Card title="PIZZA BATTLE">
+          <Card title="Pizza Battle">
 
             <Form onSubmit={this.handleSubmit}>
               <FormItem>

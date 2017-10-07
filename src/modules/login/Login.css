@@ -1,37 +1,120 @@
 .ant-layout {
-	background: #f9a400 !important;
+  background: #fff !important;
+  border-top: 4px solid #f9a400;
+  overflow-y: scroll !important;
+}
+
+::-moz-selection {
+  background: #860e00;
+  color: #fff;
 }
 
 .login-wrapper {
-	position: static;
+  position: static;
 }
 
 .login-wrapper .logo {
-	background-image: url("/logo.png");
-	background-repeat: no-repeat;
-	height: 128px;
-	margin: 0 auto;
-	width: 128px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 64px;
+  margin: 20px auto;
+  width: 64px;
+}
+
+.login-wrapper .logo.-pizza {
+  background-image: url("/logo.png");
 }
 
 .form-wrapper {
-	outline: 1px solid black;
+  outline: 1px solid black;
 }
 
-.form-holder .ant-card {
-	height: 100%;
-	position: absolute;
-	width: 100%;
+.form-holder {
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
+.form-holder .ant-card-bordered,
+.form-holder .ant-card-head {
+  background: transparent;
+  border: 0;
+}
+
+.form-holder .ant-card-head {
+  height: auto;
+}
+
+.form-holder .ant-card-head-title {
+  color: #860e00;
+  display: block;
+  float: inherit;
+  font-size: 22px;
+  line-height: 1;
+  text-align: center;
+}
+
+.form-holder .ant-card-bordered:hover {
+  box-shadow: none;
+}
+
+.login-wrapper .ant-input,
+.login-wrapper .ant-input:focus,
+.login-wrapper .ant-input-affix-wrapper:hover .ant-input:not(.ant-input-disabled) {
+  border-color: #f9a400;
+  box-shadow: none;
+}
+
+.login-wrapper .ant-input:focus {
+  border-color: #b87900;
+}
+
+.login-wrapper .ant-checkbox-checked .ant-checkbox-inner,
+.login-wrapper .ant-checkbox-indeterminate .ant-checkbox-inner {
+  background-color: #f9a400;
+  border-color: #f9a400;
+}
+
+.login-wrapper .ant-checkbox-checked:after {
+  border-color: #b87900;
+}
+
+.login-wrapper .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.login-wrapper .ant-checkbox:hover .ant-checkbox-inner,
+.login-wrapper .ant-checkbox-input:focus + .ant-checkbox-inner {
+  border-color: #b87900;
+}
+
+.login-wrapper .ant-form-item {
+  color: #860e00;
+}
+
+.login-wrapper .ant-btn-primary,
+.login-wrapper .ant-btn-primary:hover,
+.login-wrapper .ant-btn-primary:focus {
+  background-color: #f9a400;
+  border-color: #f9a400;
+  color: #fff;
+}
+
+.login-wrapper a {
+  color: #860e00;
+  text-decoration: underline;
+}
+
+.login-wrapper a:hover {
+  color: inherit;
+  text-decoration: none;
+}
 
 @media screen and (min-width: 30em) {
-	.form-holder .ant-card {
-		height: 300px;
-		left: 50%;
-		margin-left: -240px;
-		margin-top: -150px;
-		max-width: 480px;
-		top: 50%;
-	}
+  .form-holder {
+    height: 300px;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -150px;
+    max-width: 320px;
+    top: 50%;
+  }
 }
