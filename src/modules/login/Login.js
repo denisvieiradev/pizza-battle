@@ -44,6 +44,15 @@ class Login extends Component {
                   <Button type="primary" htmlType="submit" className="login-form-button">
                     Log in
                   </Button>
+                  <div className="footer-social-icons">
+                      <h4 className="_14">Follow us on</h4>
+                      <ul className="social-icons">
+                          <li><a href="" className="social-icon"> <i className="fa fa-facebook"></i></a></li>
+                          <li><a href="" className="social-icon"> <i className="fa fa-twitter"></i></a></li>
+                          
+                      </ul>
+                  </div>
+
                   Or <a href="">register now! { this.props.teste} </a>
                 </FormItem>
               </Form>
