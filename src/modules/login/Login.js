@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Icon, Input, Button,Row, Card, Col, Checkbox } from 'antd';
+import MyFacebookLoginButton from '../social/FacebookLoginProvider';
+import MyTwitterLoginButton from '../social/TwitterLoginProvider';
+import 'font-awesome/css/font-awesome.css'
 import { connect } from 'react-redux'
 const FormItem = Form.Item;
 
@@ -19,6 +22,11 @@ class Login extends Component {
           <Col span={6}>
             <Card title="PIZZA BATTLE">
               <Form onSubmit={this.handleSubmit} className="login-form">
+                <FormItem>
+                  <MyFacebookLoginButton />
+                  <MyTwitterLoginButton />
+                  <hr/>
+                </FormItem>
                 <FormItem>
                   {getFieldDecorator('userName', {
                     rules: [{ required: true, message: 'Please input your username!' }],
