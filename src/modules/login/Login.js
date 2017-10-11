@@ -4,22 +4,30 @@ import MyFacebookLoginButton from '../social/FacebookLoginProvider';
 import MyTwitterLoginButton from '../social/TwitterLoginProvider';
 import 'font-awesome/css/font-awesome.css'
 import { connect } from 'react-redux'
+import './Login.css';
+
 const FormItem = Form.Item;
 
 class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
+
     this.props.form.validateFields((err, values) => {
       if (!err) {
         console.log('Received values of form: ', values);
       }
     });
   }
+
   render() {
     const { getFieldDecorator } = this.props.form;
+
     return (
-        <Row type="flex" justify="center" align="middle">
-          <Col span={6}>
+        <Row className="login-wrapper" type="flex" justify="center" align="middle">
+          <Col className="form-holder" span={6}>
+            <div className="logo-holder">
+              <span className="logo -pizza"></span>
+            </div>
             <Card title="PIZZA BATTLE">
               <Form onSubmit={this.handleSubmit} className="login-form">
                 <FormItem>
@@ -45,19 +53,18 @@ class Login extends Component {
                   {getFieldDecorator('remember', {
                     valuePropName: 'checked',
                     initialValue: true,
-                  })(
-                    <Checkbox>Remember me</Checkbox>
-                  )}
-                  <a className="login-form-forgot" href="">Forgot password</a>
-                  <Button type="primary" htmlType="submit" className="login-form-button">
-                    Log in
-                  </Button>
-                  Or <a href="">register now! { this.props.teste} </a>
-                </FormItem>
-              </Form>
-            </Card>
-          </Col>
-        </Row>
+                  })(<Checkbox>Remember me</Checkbox>)
+                }
+              </FormItem>
+
+              <FormItem>
+                <Button type="primary" htmlType="submit">Log in</Button>
+                &nbsp;Or <a href="">register now!</a>
+              </FormItem>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
     );
   }
 }
