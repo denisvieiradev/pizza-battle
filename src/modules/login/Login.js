@@ -57,18 +57,7 @@ class Login extends Component {
                   getFieldDecorator('remember', {
                     valuePropName: 'checked',
                     initialValue: true,
-                  })(<Checkbox>Remember me</Checkbox>)
-                }
-              </FormItem>
 
-              <FormItem>
-                <Button type="primary" htmlType="submit">Log in</Button>
-                &nbsp;Or <a href="">register now!</a>
-              </FormItem>
-            </Form>
-          </Card>
-        </Col>
-      </Row>
     );
   }
 }

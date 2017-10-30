@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import { Layout } from 'antd';
 import Login from '../login/Login';
+import Signup from '../signup/Signup';
 
 const Main = () => (
   <Layout
@@ -16,6 +17,7 @@ const Main = () => (
     }}
   >
     <Route exact path="/" component={Login} />
+    <Route exact path="/signup" component={Signup} />
     <Route path="/home" component={Home} />
   </Layout>
 );
