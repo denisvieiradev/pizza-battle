@@ -5,6 +5,18 @@ import './Login.css';
 
 const FormItem = Form.Item;
 
+const CardTitle = () => (
+  <Row type="flex" justify="space-around" align="middle" className="card-title">
+    <Col
+      span={12}
+      justify="center"
+      align="middle">
+      <img src="./logo.png" alt="Pizza Battle" className="login-logo" />
+      <h1 className="login-title">Pizza Battle</h1>
+    </Col>
+  </Row>
+)
+
 class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
@@ -20,15 +32,11 @@ class Login extends Component {
     const { getFieldDecorator } = this.props.form;
 
     return (
-      <Row className="login-wrapper">
-        <Col className="form-holder">
+      <Row type="flex" justify="space-around" align="middle">
+        <Col span={8}>
 
-          <div className="logo-holder">
-            <span className="logo -pizza"></span>
-          </div>
-
-          <Card title="Pizza Battle">
-
+          <Card>
+            <CardTitle />
             <Form onSubmit={this.handleSubmit}>
               <FormItem>
                 {
